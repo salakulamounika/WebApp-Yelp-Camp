@@ -81,7 +81,7 @@ pipeline {
             steps {
                 
                    withKubeCredentials(kubectlCredentials: [[caCertificate: '', clusterName: 'eks-5', contextName: '', credentialsId: 'kube-cred', namespace: 'webapps', serverUrl: 'https://33710B57D81DA597604EBC2D905CF991.gr7.ap-south-1.eks.amazonaws.com']]) {
-                        sh "kubectl apply -f dss.yml"
+                        sh "kubectl apply -f Manifests/"
                         sleep 60
                     } 
                 
